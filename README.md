@@ -6,8 +6,8 @@
 
 -   JSON Validators Used
 
-1. jsonschema
+    1. jsonschema
 
-2. ajv
+    2. ajv
 
-3. hyperjump
+    3. hyperjump
