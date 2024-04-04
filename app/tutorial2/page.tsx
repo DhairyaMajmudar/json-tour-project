@@ -105,10 +105,12 @@ export default function Home() {
                         </SheetTitle>
                         <SheetDescription>
                             <ul className="ml-2 text-lg mt-5 flex flex-col gap-4 list-disc">
-                                <li className="">
-                                    Chapter 1: Introduction and Schema
-                                    Definations
-                                </li>
+                                <Link href={"/tutorial1"}>
+                                    <li className="">
+                                        Chapter 1: Introduction and Schema
+                                        Definations
+                                    </li>
+                                </Link>
                                 <Link href={"/tutorial2"}>
                                     <li className="text-blue-900 font-semibold ">
                                         Chapter 2: Arrays and type keyword

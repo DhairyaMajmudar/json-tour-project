@@ -34,6 +34,8 @@ To create a basic schema definition, define the following keywords:
 
 At first try to create the schema by your own if you feel blocked refer to below schema example :)
 
+Validate if the schema created is corrected with the help of validate button.
+
 ## Example
 
 ```json
