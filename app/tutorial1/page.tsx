@@ -5,6 +5,7 @@ import CodeLayout from "../../components/CodeLayout";
 import { ajv, hyperjumpValidate } from "@/lib/validators";
 import { FaArrowRight } from "react-icons/fa6";
 import Navbar from "../../components/Navbar";
+import { Button } from "@/components/ui/button";
 
 async function handleValidation(
     setValidity: any,
@@ -58,8 +59,8 @@ export default function Home() {
                 }}
                 buttons={
                     <>
-                        <button
-                            className=" group flex flex-row justify-center gap-2 items-center w-[100px] hover:bg-blue-800 bg-blue-900 text-white px-1 text-sm font-semibold rounded-lg py-2"
+                        <Button
+                            variant={"primary"}
                             onClick={() =>
                                 handleValidation(
                                     setValidity,
@@ -69,15 +70,17 @@ export default function Home() {
                             }
                         >
                             Validate
-                        </button>
-
+                        </Button>
                         <Link href={"/tutorial2"}>
-                            <button className="group flex flex-row justify-center gap-2 items-center w-[100px] hover:bg-blue-800 bg-blue-900 text-white px-1 text-sm font-semibold rounded-lg py-2">
+                            <Button
+                                variant={"primary"}
+                                className="gap-3 group "
+                            >
                                 Step 2
                                 <span className="group-hover:translate-x-2 group-hover:duration-150">
                                     <FaArrowRight />
                                 </span>
-                            </button>
+                            </Button>
                         </Link>
                     </>
                 }

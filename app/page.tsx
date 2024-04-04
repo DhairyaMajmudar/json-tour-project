@@ -3,6 +3,7 @@
 import Link from "next/link";
 import JsonIcon from "@/public/logo.svg";
 import { FaArrowRight } from "react-icons/fa6";
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
     return (
@@ -26,12 +27,12 @@ export default function Home() {
                     </div>
                     <div className="flex justify-center items-center">
                         <Link href="/tutorial1">
-                            <button className=" group flex flex-row justify-center gap-2 items-center w-[150px]  bg-blue-900 text-white px-1 text-sm font-semibold rounded-lg py-3 ">
+                            <Button variant={"primary"} className="gap-3 group">
                                 Start The Tour
                                 <span className="group-hover:translate-x-2 group-hover:duration-150">
                                     <FaArrowRight />
                                 </span>
-                            </button>
+                            </Button>
                         </Link>
                     </div>
                 </section>

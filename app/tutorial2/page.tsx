@@ -4,11 +4,13 @@ import CodeLayout from "../../components/CodeLayout";
 import { ajv, hyperjumpValidate } from "@/lib/validators";
 import Link from "next/link";
 import Navbar from "../../components/Navbar";
+import { Button } from "@/components/ui/button";
+import { FaArrowRight } from "react-icons/fa6";
 
 async function handleValidation(
     setValidity: any,
     setIsInvalid: any,
-    code: string | undefined,
+    code: string | undefined
 ) {
     try {
         const schema = JSON.parse(code!);
@@ -18,7 +20,7 @@ async function handleValidation(
         const avjErrors = ajv(data, schema).errors;
         if (output?.valid) {
             setValidity(
-                "Bingo! Your JSON schema is valid. Now let's move to the next step.",
+                "Bingo! Your JSON schema is valid. Now let's move to the next step."
             );
 
             setIsInvalid(false);
@@ -56,22 +58,28 @@ export default function Home() {
                 }}
                 buttons={
                     <>
-                        <button
-                            className=" group flex flex-row justify-center gap-2 items-center w-[100px] hover:bg-blue-800 bg-blue-900 text-white px-1 text-sm font-semibold rounded-lg py-2"
+                        <Button
+                            variant={"primary"}
                             onClick={() =>
                                 handleValidation(
                                     setValidity,
                                     setIsInvalid,
-                                    code,
+                                    code
                                 )
                             }
                         >
                             Validate
-                        </button>
+                        </Button>
                         <Link href={"/finish"}>
-                            <button className="group flex flex-row justify-center gap-2 items-center w-[100px] hover:bg-blue-800 bg-blue-900 text-white px-1 text-sm font-semibold rounded-lg py-2">
+                            <Button
+                                variant={"primary"}
+                                className="gap-3 group "
+                            >
                                 Finish
-                            </button>
+                                <span className="group-hover:translate-x-2 group-hover:duration-150">
+                                    <FaArrowRight />
+                                </span>
+                            </Button>
                         </Link>
                     </>
                 }

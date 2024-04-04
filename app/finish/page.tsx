@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import Instructions from "@/components/CodeInstructions";
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
     const [InstructionsMarkdown, setInstructionsMarkdown] =
@@ -20,9 +21,7 @@ export default function Home() {
                 <Instructions markdownInstructions={InstructionsMarkdown} />
 
                 <Link href={"/"}>
-                    <button className=" w-[100px] right-8 fixed hover:bg-blue-800 bg-blue-900 text-white px-1 text-sm font-semibold rounded-lg py-2">
-                        Finish
-                    </button>
+                    <Button>Home</Button>
                 </Link>
             </div>
         </>
