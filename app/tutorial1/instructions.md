@@ -1,4 +1,4 @@
-## Introduction
+## Getting Started
 
 Hello 👋🏻, Welcome to Tour of JSON Schema an interactive learning platform to make your experience of lerning JSON Schema easy and smooth.
 
@@ -45,4 +45,3 @@ At first try to create the schema by your own if you feel blocked refer to below
     "type": "object"
 }
 ```
-

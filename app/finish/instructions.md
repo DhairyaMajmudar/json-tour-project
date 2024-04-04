@@ -10,7 +10,7 @@ In this chapter we learned about what JSON Schema is and what are its use cases.
 
 We also did hands on practise on the code editor while validating it with the sample schema data.
 
-## Chapter 2: Arrays and type keyword in it.
+## Chapter 2: Arrays and type keyword
 
 Array data structure is very useful to store elements in order. In this chapter we have larned about defining an array of type number with the help of keywords `items` and `type` useful for defining the type of elements in the array.
 

@@ -5,7 +5,7 @@ import jsonIcon from "@/public/logo.svg";
 const Navbar = () => {
     return (
         <>
-            <div className="pb-2">
+            <div className="">
                 <div className="flex justify-center  gap-6 items-center ">
                     <img
                         alt="logo"
