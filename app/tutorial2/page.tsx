@@ -8,7 +8,7 @@ import Navbar from "../../components/Navbar";
 async function handleValidation(
     setValidity: any,
     setIsInvalid: any,
-    code: string | undefined
+    code: string | undefined,
 ) {
     try {
         const schema = JSON.parse(code!);
@@ -17,7 +17,9 @@ async function handleValidation(
 
         const avjErrors = ajv(data, schema).errors;
         if (output?.valid) {
-            setValidity("Bingo! Your JSON schema is valid.");
+            setValidity(
+                "Bingo! Your JSON schema is valid. Now let's move to the next step.",
+            );
 
             setIsInvalid(false);
         } else {
@@ -60,13 +62,13 @@ export default function Home() {
                                 handleValidation(
                                     setValidity,
                                     setIsInvalid,
-                                    code
+                                    code,
                                 )
                             }
                         >
                             Validate
                         </button>
-                        <Link href={"/"}>
+                        <Link href={"/finish"}>
                             <button className="group flex flex-row justify-center gap-2 items-center w-[100px] hover:bg-blue-800 bg-blue-900 text-white px-1 text-sm font-semibold rounded-lg py-2">
                                 Finish
                             </button>
